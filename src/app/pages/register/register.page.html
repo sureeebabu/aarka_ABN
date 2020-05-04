@@ -1,0 +1,86 @@
+<ion-content class="myBg">
+  <div class="ion-text-center ion-padding">
+    <img class="rounded-circle" alt="75x75" src="assets/logo.png" style="width: 150px; height: 150px;">
+    <p>
+      <ion-text color="light">
+        <h3>SIGN UP</h3>
+      </ion-text>
+    </p>
+  </div>
+
+  <form [formGroup]="validationsForm" (ngSubmit)="onSubmit(validationsForm.value)">
+    <ion-item>
+      <ion-label position="floating" color="light">Email *
+      </ion-label>
+      <ion-input type="text" formControlName="email" color="light" clearOnEdit="false"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of errorMsg.validationMSG.email">
+        <div class="error-message"
+          *ngIf="validationsForm.get('email').hasError(validation.type) && (validationsForm.get('email').dirty || validationsForm.get('email').touched)">
+          <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <div formGroupName="matching_passwords">
+      <ion-item>
+        <ion-label position="floating" color="light">Password</ion-label>
+        <ion-input formControlName="password" [type]="showPassword ? 'password' : 'text'" clearOnEdit="false">
+        </ion-input>
+        <ion-icon slot="end" class="ion-padding-top" (click)="onPasswordToggle()" ion-button clear small icon-only
+          [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of errorMsg.validationMSG.password">
+          <div class="error-message"
+            *ngIf="validationsForm.get('matching_passwords').get('password').hasError(validation.type) && (validationsForm.get('matching_passwords').get('password').dirty || validationsForm.get('matching_passwords').get('password').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label position="floating" color="light">Confirm Password</ion-label>
+        <ion-input formControlName="confirm_password" [type]="showConfirmPassword ? 'password' : 'text'"
+          clearOnEdit="false">
+        </ion-input>
+        <!-- <ion-input type="password" formControlName="confirm_password"></ion-input> -->
+        <ion-icon slot="end" class="ion-padding-top" (click)="onConfirmPasswordToggle()" ion-button clear small
+          icon-only [name]="showConfirmPassword ? 'eye-off' : 'eye'"></ion-icon>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of errorMsg.validationMSG.confirmPassword">
+          <div class="error-message"
+            *ngIf="validationsForm.get('matching_passwords').get('confirm_password').hasError(validation.type) && (validationsForm.get('matching_passwords').get('confirm_password').dirty || validationsForm.get('matching_passwords').get('confirm_password').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <!-- These validations are for the form group -->
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of errorMsg.validationMSG.matchingPasswords">
+        <div class="error-message"
+          *ngIf="validationsForm.get('matching_passwords').hasError(validation.type) && (validationsForm.get('matching_passwords').get('confirm_password').dirty || validationsForm.get('matching_passwords').get('confirm_password').touched)">
+          <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
+    
+
+    <div class="ion-padding ion-text-center">
+      <ion-button size="large" expand="block" fill="outline" color="light" type="submit"
+        [disabled]="!validationsForm.valid">Register
+      </ion-button>
+    </div>
+
+    <div class="ion-padding-start ion-text-center" >
+      <!-- <ion-text class="ion-text-left" color="light" routerLink="/forgotpwd" routerDirection="forward">Forgot your password?
+      </ion-text> -->
+      <ion-text color="light" routerLink="/login" routerDirection="forward">Existing User? Log In
+      </ion-text>
+    </div>
+  </form>
+
+</ion-content>

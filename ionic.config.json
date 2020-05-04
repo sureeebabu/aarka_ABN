@@ -1,0 +1,7 @@
+{
+  "name": "ABN",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,59 @@
+<ion-content class="ion-padding-top myBg">
+  <div class="ion-text-center ion-padding">
+    <img class="rounded-circle" alt="75x75" src="assets/logo.png" style="width: 150px; height: 150px;">
+    <p>
+      <ion-text color="light">
+        <h3>SIGN IN</h3>
+      </ion-text>
+    </p>
+  </div>
+
+  <form class="ion-padding" [formGroup]="validationsForm" (ngSubmit)="onSubmit(validationsForm.value)">
+    <ion-item>
+      <ion-label position="floating" color="light">Email *
+      </ion-label>
+      <ion-input type="text" formControlName="email" color="light" clearOnEdit="false"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of errorMsg.validationMSG.email">
+        <div class="error-message"
+          *ngIf="validationsForm.get('email').hasError(validation.type) && (validationsForm.get('email').dirty || validationsForm.get('email').touched)">
+          <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating" color="light">Password *</ion-label>
+      <ion-input formControlName="password" [type]="showPassword ? 'password' : 'text'" clearOnEdit="false">
+      </ion-input>
+      <ion-icon slot="end" class="ion-padding-top" (click)="onPasswordToggle()" ion-button clear small icon-only
+        [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+    </ion-item>
+
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of errorMsg.validationMSG.password">
+        <div class="error-message"
+          *ngIf="validationsForm.get('password').hasError(validation.type) && (validationsForm.get('password').dirty || validationsForm.get('password').touched)">
+          <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="ion-padding-top ion-text-center">
+      <ion-button size="large" expand="block" fill="outline" color="light" type="submit"
+        [disabled]="!validationsForm.valid">Login
+      </ion-button>
+    </div>
+
+    <div >
+      <ion-text class="ion-text-left" color="light" routerLink="/forgotpwd" routerDirection="forward">Forgot your password?
+      </ion-text>
+      <ion-text class="pull-right" color="light" routerLink="/register" routerDirection="forward">Sign Up
+      </ion-text>
+    </div>
+    
+
+  </form>
+
+</ion-content>
