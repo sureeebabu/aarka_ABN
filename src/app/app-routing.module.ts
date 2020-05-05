@@ -26,6 +26,18 @@ const routes: Routes = [
     path: 'forgotpwd',
     loadChildren: () => import('./pages/forgotpwd/forgotpwd.module').then( m => m.ForgotpwdPageModule)
   },
+  {
+    path: 'changepwd',
+    loadChildren: () => import('./pages/changepwd/changepwd.module').then( m => m.ChangepwdPageModule)
+  },
+  {
+    path: 'aboutus',
+    loadChildren: () => import('./pages/aboutus/aboutus.module').then( m => m.AboutusPageModule)
+  },
+  {
+    path: 'contactus',
+    loadChildren: () => import('./pages/contactus/contactus.module').then( m => m.ContactusPageModule)
+  },
 ];
 
 @NgModule({

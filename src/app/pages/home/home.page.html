@@ -1,7 +1,78 @@
-<app-topbar pagetitle="Home" ></app-topbar>
-
+<app-topbar pagetitle="Business Categories"></app-topbar>
 <ion-content>
-<ion-button (click)="logutfn()">
-    Logout
-</ion-button>
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">CONSULTING</ion-text>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-diamond fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">DIAMONDS</ion-text>
+                </div>
+            </ion-col>
+
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-graduation-cap fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">EDUCATION</ion-text>
+                </div>
+            </ion-col>
+
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-plug fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">ELECTRICAL</ion-text>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-tint fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">ENERGY</ion-text>
+                </div>
+            </ion-col>
+
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-pagelines fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">ENVIRONMENT</ion-text>
+                </div>
+            </ion-col>
+
+
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-money fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">FINANCIAL</ion-text>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-university fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">GOVERNMENT</ion-text>
+                </div>
+            </ion-col>
+
+            <ion-col size="4">
+                <div class="card-square card">
+                    <i class="fa fa-heartbeat fa-3x" aria-hidden="true"></i>
+                    <ion-text color="success">HEALTH CARE</ion-text>
+                </div>
+            </ion-col>
+
+
+        </ion-row>
+    </ion-grid>
+
 </ion-content>
+<ion-footer>
+    <ion-title class="ion-text-center">
+        <ion-button (click)="logutfn()" color="success">
+            Logout
+        </ion-button>
+    </ion-title>
+</ion-footer>

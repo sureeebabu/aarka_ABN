@@ -21,9 +21,19 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Login ',
-      url: '/login',
-      icon: 'home'
+      title: 'About Us',
+      url: '/aboutus',
+      icon: 'people'
+    },
+    {
+      title: 'Contact Us',
+      url: '/contactus',
+      icon: 'call'
+    },
+    {
+      title: 'Log Out',
+      url: '/',
+      icon: 'log-out'
     }
   ];
 
