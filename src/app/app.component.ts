@@ -21,6 +21,11 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'My Account',
+      url: '/profile',
+      icon: 'person-circle-outline'
+    },
+    {
       title: 'About Us',
       url: '/aboutus',
       icon: 'people'
@@ -31,9 +36,9 @@ export class AppComponent {
       icon: 'call'
     },
     {
-      title: 'Log Out',
-      url: '/',
-      icon: 'log-out'
+      title: 'Change Password',
+      url: '/changepwd',
+      icon: 'lock-closed'
     }
   ];
 

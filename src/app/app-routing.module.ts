@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'contactus',
     loadChildren: () => import('./pages/contactus/contactus.module').then( m => m.ContactusPageModule)
   },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
 ];
 
 @NgModule({
