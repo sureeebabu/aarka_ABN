@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { ConfigService } from 'src/app/services/config/config.service';
 import { ErrormsgService } from 'src/app/services/errormsg/errormsg.service';
 import { AuthenticationService } from 'src/app/services/auth/authentication.service';
+import { HttpClient } from '@angular/common/http';
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -20,10 +22,15 @@ export class LoginPage implements OnInit, OnDestroy {
     private router: Router,
     private config: ConfigService,
     public errorMsg: ErrormsgService,
-    private auth: AuthenticationService
-  ) { }
+    private auth: AuthenticationService,
+    private http: HttpClient,
+    private menuCtrl: MenuController
+  ) {
+    this.menuCtrl.enable(false);
+  }
 
   ngOnInit() {
+    // this.getData();
     this.validationsForm = this.formBuilder.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -33,6 +40,14 @@ export class LoginPage implements OnInit, OnDestroy {
         Validators.minLength(5),
         Validators.required
       ])),
+    });
+  }
+
+  getData() {
+    this.http.get('http://localhost:3000/api/v1/users/1').subscribe(result => {
+      console.log(result);
+    }, error => {
+      console.log(error);
     });
   }
 
