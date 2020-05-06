@@ -1,16 +1,17 @@
 <app-topbar pagetitle="Business Categories"></app-topbar>
 <ion-content>
-    <ion-searchbar placeholder="Search"></ion-searchbar>
+    <ion-searchbar (ionInput)="onSearch($event)" placeholder="Search"></ion-searchbar>
     <ion-grid>
         <ion-row>
 
-            <ion-col size="4" class="animated rubberBand">
+            <ion-col *ngFor="let j of json" size="4" class="animated rubberBand">
                 <div class="card-square card">
-                    <img src="../../../assets/handshake.png" class="ion-padding-start ion-padding-end">
-                    <ion-text color="success">Consulting</ion-text>
+                    <img [src]="j.img" class="ion-padding-start ion-padding-end">
+                    <ion-text color="success">{{j.title}}</ion-text>
                 </div>
             </ion-col>
-            <ion-col size="4" class="animated rubberBand">
+        
+            <!-- <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
                     <img src="../../../assets/diamond.png" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">Diamonds</ion-text>
@@ -26,20 +27,20 @@
 
             <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
-                    <i class="fa fa-plug fa-3x" ></i>
+                    <img src="../../../assets/electrical.png" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">Electrical</ion-text>
                 </div>
             </ion-col>
             <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
-                    <i class="fa fa-tint fa-3x" ></i>
+                    <img src="../../../assets/energy.png" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">Energy</ion-text>
                 </div>
             </ion-col>
 
             <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
-                    <i class="fa fa-pagelines fa-3x" ></i>
+                    <img src="../../../assets/leaf.png" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">Environment</ion-text>
                 </div>
             </ion-col>
@@ -47,33 +48,30 @@
 
             <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
-                    <i class="fa fa-money fa-3x" ></i>
+                    <img src="../../../assets/financial.png" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">Financial</ion-text>
                 </div>
             </ion-col>
             <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
-                    <i class="fa fa-university fa-3x" ></i>
+                    <img src="../../../assets/government.png" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">Government</ion-text>
                 </div>
             </ion-col>
 
             <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
-                    <i class="fa fa-heartbeat fa-3x" ></i>
+                    <img src="../../../assets/`.png" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">Health Care</ion-text>
                 </div>
-            </ion-col>
-
-
+            </ion-col> -->
         </ion-row>
     </ion-grid>
-
 </ion-content>
-<ion-footer>
+<!-- <ion-footer>
     <ion-title class="ion-text-center">
         <ion-button (click)="logutfn()" color="success">
             Logout
         </ion-button>
     </ion-title>
-</ion-footer>
+</ion-footer> -->
