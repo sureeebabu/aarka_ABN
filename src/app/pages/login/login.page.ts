@@ -64,6 +64,7 @@ export class LoginPage implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    this.menuCtrl.enable(true);
     this.validationsForm.reset();
   }
 
