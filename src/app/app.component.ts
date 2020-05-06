@@ -23,7 +23,7 @@ export class AppComponent {
     {
       title: 'My Account',
       url: '/profile',
-      icon: 'home'
+      icon: 'pencil'
     },
     {
       title: 'About Us',
