@@ -1,0 +1,68 @@
+<ion-content>
+
+  <div class="container1">
+    <img src="../../../assets/speaker-background.png" style="width:100%;">
+    <!-- <div class="bottom-left">Bottom Left</div> -->
+    <div class="top-left">
+      <i class="fa fa-arrow-left fa-1x" style="color: white;" routerLink="/members"></i>
+    </div>
+    <!-- <div class="top-right">Top Right</div> -->
+    <!-- <div class="bottom-right">Bottom Right</div> -->
+    <div class="centered">
+      <img src="../../../assets/noImg.png" alt="" class="rounded-circle" style="width: 150px; height: 150px;">
+    </div>
+  </div>
+  <ion-grid fixed class="border-bottom bg-white">
+    <ion-row class="ion-no-padding">
+      <ion-col size="6" class="ion-text-right">
+        <ion-button class="animated rubberBand" color="success" (click)="callFn()">
+          <ion-icon slot="start" name="call-outline"></ion-icon> CALL
+        </ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-text-left">
+        <ion-button class="animated rubberBand" color="success" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x" slot="start"></i>&nbsp;Message
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-segment color="success" [(ngModel)]="type">
+    <ion-segment-button value="business" color="danger" checked>
+      <i class="fa fa-building fa-2x"></i>
+
+      <!-- <ion-label color="danger" class="ion-text-capitalize">Product <br> Specification</ion-label> -->
+    </ion-segment-button>
+    <ion-segment-button value="profile">
+      <i class="fa fa-user fa-2x"></i>
+    </ion-segment-button>
+    <ion-segment-button value="location">
+      <i class="fa fa-map-marker fa-2x"></i>
+
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'business'">
+      1
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'profile'" style="height: 400px;">
+      <div class="noRecordContainer">
+        <ion-text color="success">
+          <b>Content Coming Soon .....</b>
+        </ion-text>
+      </div>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'location'" style="height: 400px;">
+      <div class="noRecordContainer">
+        <ion-text color="success">
+          <b>Content Coming Soon .....</b>
+        </ion-text>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

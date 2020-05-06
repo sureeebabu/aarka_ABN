@@ -62,7 +62,7 @@ export class HomePage implements OnInit {
   }
 
   onSearch(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     const searchTxt = event.target.value;
     if (searchTxt !== '' && searchTxt != null && searchTxt !== undefined) {
       this.json = this.json.filter((item) => {

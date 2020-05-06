@@ -3,14 +3,13 @@
     <ion-searchbar (ionInput)="onSearch($event)" placeholder="Search"></ion-searchbar>
     <ion-grid>
         <ion-row>
-
-            <ion-col *ngFor="let j of json" size="4" class="animated rubberBand">
+            <ion-col *ngFor="let j of json" size="4" class="animated rubberBand" routerLink="/members"
+                routerDirection="forward">
                 <div class="card-square card">
                     <img [src]="j.img" class="ion-padding-start ion-padding-end">
                     <ion-text color="success">{{j.title}}</ion-text>
                 </div>
             </ion-col>
-        
             <!-- <ion-col size="4" class="animated rubberBand">
                 <div class="card-square card">
                     <img src="../../../assets/diamond.png" class="ion-padding-start ion-padding-end">
