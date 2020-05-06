@@ -30,8 +30,6 @@
   <ion-segment color="success" [(ngModel)]="type">
     <ion-segment-button value="business" color="danger" checked>
       <i class="fa fa-building fa-2x"></i>
-
-      <!-- <ion-label color="danger" class="ion-text-capitalize">Product <br> Specification</ion-label> -->
     </ion-segment-button>
     <ion-segment-button value="profile">
       <i class="fa fa-user fa-2x"></i>
@@ -44,7 +42,32 @@
 
   <div [ngSwitch]="type">
     <ion-list *ngSwitchCase="'business'">
-      1
+
+      <form class="ion-padding" [formGroup]="validationsForm" (ngSubmit)="onSubmit(validationsForm.value)">
+
+
+        <div class="form-group">
+          <label for="buss">My Business Details</label>
+          <input type="text" formControlName="businessDetails" class="form-control" id="buss">
+        </div>
+        <div class="form-group">
+          <label for="prod">My Product and Services</label>
+          <input type="text" formControlName="product" class="form-control" id="prod">
+        </div> 
+
+        <div class="form-group">
+          <label for="keywords">Keywords</label>
+          <input type="text" formControlName="keywords" class="form-control" id="keywords">
+        </div> 
+        
+          <ion-button expand="block" fill="outline" color="success" type="submit"
+            [disabled]="!validationsForm.valid">Submit
+          </ion-button>
+        
+
+
+
+      </form>
 
     </ion-list>
 

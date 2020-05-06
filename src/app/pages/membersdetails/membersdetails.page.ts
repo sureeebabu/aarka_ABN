@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { SMS } from '@ionic-native/sms/ngx';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-membersdetails',
@@ -10,13 +11,32 @@ import { SMS } from '@ionic-native/sms/ngx';
 export class MembersdetailsPage implements OnInit {
 
   type = 'business';
+  validationsForm: FormGroup;
+
   constructor(
     private callNumber: CallNumber,
-    private sms: SMS
+    private sms: SMS,
+    public formBuilder: FormBuilder,
   ) { }
 
   ngOnInit() {
+    this.validationsForm = this.formBuilder.group({
+      businessDetails: new FormControl('', Validators.compose([
+        // Validators.required,
+      ])),
+      product: new FormControl('', Validators.compose([
+        // Validators.required
+      ])),
+      keywords: new FormControl('', Validators.compose([
+        // Validators.required
+      ])),
+    });
   }
+
+  async onSubmit(values) {
+    console.log(values);
+  }
+
 
   smsFn() {
     this.sms.send('7904768050', 'Hello world!');
