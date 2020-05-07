@@ -9,6 +9,8 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
+  showSearchbar: boolean;
+  term = '';
   public fullData = [];
   public json = [
     {
@@ -61,18 +63,25 @@ export class HomePage implements OnInit {
     this.fullData = this.json;
   }
 
-  onSearch(event) {
-    // console.log(event.target.value);
-    const searchTxt = event.target.value;
-    if (searchTxt !== '' && searchTxt != null && searchTxt !== undefined) {
-      this.json = this.json.filter((item) => {
-        return item.title.toLowerCase().indexOf(searchTxt.toLowerCase()) > -1;
-      });
-    } else {
-      this.json = this.fullData;
-
-    }
+  onCancelSearch() {
+    //  alert('ask');
+    this.showSearchbar = false;
+    // this.json = this.fullData;
+    console.log(this.json);
   }
+
+  // onSearch(event) {
+  //   // console.log(event.target.value);
+  //   const searchTxt = event.target.value;
+  //   if (searchTxt !== '' && searchTxt != null && searchTxt !== undefined) {
+  //     this.json = this.json.filter((item) => {
+  //       return item.title.toLowerCase().indexOf(searchTxt.toLowerCase()) > -1;
+  //     });
+  //   } else {
+  //     this.json = this.fullData;
+
+  //   }
+  // }
 
   logutfn() {
     this.storage.clear();

@@ -1,9 +1,30 @@
-<app-topbar pagetitle="Business Categories"></app-topbar>
+<!-- <app-topbar pagetitle="Business Categories"></app-topbar> -->
+<ion-header translucent="true">
+    <ion-toolbar color="success">
+        <ion-buttons *ngIf="!showSearchbar" slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title *ngIf="!showSearchbar">Bussiness Category</ion-title>
+        <!-- <ion-searchbar *ngIf="showSearchbar" showCancelButton="true" animated="true" (ionInput)="onSearch($event)"
+            (ionCancel)="showSearchbar = false" placeholder="Search"></ion-searchbar> -->
+        <ion-searchbar *ngIf="showSearchbar" showCancelButton="true" (ionCancel)="onCancelSearch()"
+            placeholder="Search" [(ngModel)]="term" animated="true"></ion-searchbar>
+
+        <ion-buttons slot="end">
+            <ion-button *ngIf="!showSearchbar" (click)="showSearchbar = true">
+                <ion-icon slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+
+
+    </ion-toolbar>
+</ion-header>
+
 <ion-content>
-    <ion-searchbar (ionInput)="onSearch($event)" placeholder="Search"></ion-searchbar>
     <ion-grid>
         <ion-row>
-            <ion-col *ngFor="let j of json" size="4" class="animated rubberBand" routerLink="/members"
+            <ion-col *ngFor="let j of json | filter:term" size="4" class="animated rubberBand" routerLink="/members"
                 routerDirection="forward">
                 <div class="card-square card">
                     <img [src]="j.img" class="ion-padding-start ion-padding-end">

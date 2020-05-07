@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@ionic-native/android-permissions": "^5.25.0",
     "@ionic-native/call-number": "^5.25.0",
     "@ionic-native/core": "^5.0.7",
     "@ionic-native/sms": "^5.25.0",
@@ -33,11 +34,13 @@
     "bootstrap": "^4.4.1",
     "call-number": "^1.0.1",
     "cordova-android": "8.1.0",
+    "cordova-plugin-android-permissions": "^1.0.2",
     "cordova-sms-plugin": "^1.0.0",
     "cordova-sqlite-storage": "^5.0.0",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
+    "ng2-search-filter": "^0.5.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -84,7 +87,8 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-sqlite-storage": {},
       "mx.ferreyra.callnumber": {},
-      "cordova-sms-plugin": {}
+      "cordova-sms-plugin": {},
+      "cordova-plugin-android-permissions": {}
     },
     "platforms": [
       "android"

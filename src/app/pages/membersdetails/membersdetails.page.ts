@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { SMS } from '@ionic-native/sms/ngx';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 @Component({
   selector: 'app-membersdetails',
@@ -17,6 +18,7 @@ export class MembersdetailsPage implements OnInit {
     private callNumber: CallNumber,
     private sms: SMS,
     public formBuilder: FormBuilder,
+    private androidPermissions: AndroidPermissions
   ) { }
 
   ngOnInit() {
@@ -39,7 +41,11 @@ export class MembersdetailsPage implements OnInit {
 
 
   smsFn() {
-    this.sms.send('7904768050', 'Hello world!');
+    this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.SEND_SMS).then(() => {
+      this.sms.send('7904768050', 'Hello world!');
+    }).catch((err) => {
+      alert(JSON.stringify(err));
+    });
   }
   callFn() {
     this.callNumber.callNumber('1234567890', true).then(res => console.log('Launched dialer!', res))
