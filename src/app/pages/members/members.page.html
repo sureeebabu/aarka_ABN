@@ -8,124 +8,242 @@
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-list>
-    <ion-item class="animated fadeInLeft">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Arun kumar</h2>
-        <h3 class="ion-text-wrap">Manager - Hardware Testing, Enlighted Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
-  
-    <ion-item class="animated fadeInRight">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Ashok kumar</h2>
-        <h3 class="ion-text-wrap">Proprietor - BBS Network, Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
+  <ion-list lines="full">
 
-    <ion-item class="animated fadeInLeft">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Suresh kumar</h2>
-        <h3 class="ion-text-wrap">Develope - Software Testing, Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
+    <ion-item-sliding class="animated fadeInLeft" > 
+      <ion-item routerLink="/membersdetails" >
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Arun kumar</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Manager - Hardware Testing, Enlighted Chennai, India</p>
+          <p>2003 - E & I</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
 
-    <ion-item class="animated fadeInRight">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Arun kumar</h2>
-        <h3 class="ion-text-wrap">Manager - Hardware Testing, Enlighted Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
-  
-    <ion-item class="animated fadeInLeft">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Ashok kumar</h2>
-        <h3 class="ion-text-wrap">Proprietor - BBS Network, Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
 
-    <ion-item class="animated fadeInRight">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Suresh kumar</h2>
-        <h3 class="ion-text-wrap">Develope - Software Testing, Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
+    <ion-item-sliding class="animated fadeInRight" > 
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Ashok kumar</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Proprietor - BBS Network, Chennai, India</p>
+          <p>1997 - M & P</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
 
-    <ion-item class="animated fadeInLeft">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Arun kumar</h2>
-        <h3 class="ion-text-wrap">Manager - Hardware Testing, Enlighted Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
-  
-    <ion-item class="animated fadeInRight">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Ashok kumar</h2>
-        <h3 class="ion-text-wrap">Proprietor - BBS Network, Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
+    <ion-item-sliding class="animated fadeInLeft" > 
+      <ion-item routerLink="/membersdetails" >
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Avinav Mohanty</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Design Engineer - Enlighted Inc, Chennai, India</p>
+          <p>2011 - Electrical</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
 
-    <ion-item class="animated fadeInLeft">
-      <ion-avatar slot="start">
-        <img src="../../../assets/noImg.png">
-      </ion-avatar>
-      <ion-label routerLink="/membersdetails" >
-        <h2>Suresh kumar</h2>
-        <h3 class="ion-text-wrap">Develope - Software Testing, Chennai, India</h3>
-        <p>2020 - E & I</p>
-      </ion-label>
-      <i class="fa fa-phone fa-2x" (click)="callFn()" style="color: #1cdcaf;" slot="end"></i>
-      <i class="fa fa-comments fa-2x" (click)="smsFn()" style="color: #ffc409;" slot="end"></i>
-    </ion-item>
-    
+    <ion-item-sliding class="animated fadeInRight" > 
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Babu Venkatesh</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Director, Glosap Consulting Pte Ltd India / Singapore / Malayasia</p>
+          <p>1998 - Electrical</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInLeft" > 
+      <ion-item routerLink="/membersdetails" >
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Suresh Kumar</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Android Developer, Chennai, India</p>
+          <p>2016 - Computer Science</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInRight" > 
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Arun kumar</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Manager - Hardware Testing, Enlighted Chennai, India</p>
+          <p>2003 - E & I</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+    <ion-item-sliding class="animated fadeInLeft" > 
+      <ion-item routerLink="/membersdetails" >
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Ashok kumar</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Proprietor - BBS Network, Chennai, India</p>
+          <p>1997 - M & P</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInRight" > 
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Avinav Mohanty</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Design Engineer - Enlighted Inc, Chennai, India</p>
+          <p>2011 - Electrical</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInLeft" > 
+      <ion-item routerLink="/membersdetails" >
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Babu Venkatesh</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Director, Glosap Consulting Pte Ltd India / Singapore / Malayasia</p>
+          <p>1998 - Electrical</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInRight" > 
+      <ion-item routerLink="/membersdetails" >
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-text color="success">Suresh Kumar</ion-text>
+          </h3>
+          <p class="ion-text-wrap">Android Developer, Chennai, India</p>
+          <p>2016 - Computer Science</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" >
+          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" >
+          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+ 
   </ion-list>
+
+
 
 </ion-content>
