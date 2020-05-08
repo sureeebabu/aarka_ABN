@@ -11,3 +11,14 @@
 .card {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.20);
 }
+
+.buttonCss {
+
+    button.alert-button:nth-child(1){
+      color: #222428;
+    }
+
+    button.alert-button:nth-child(2){
+      color: #222428;
+    }
+}
