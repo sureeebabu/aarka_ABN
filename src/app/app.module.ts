@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { SMS } from '@ionic-native/sms/ngx';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
     SplashScreen,
     CallNumber,
     SMS,
+    SocialSharing,
     AndroidPermissions,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

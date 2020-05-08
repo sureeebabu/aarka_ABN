@@ -3,6 +3,7 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
 import { SMS } from '@ionic-native/sms/ngx';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-membersdetails',
@@ -18,7 +19,8 @@ export class MembersdetailsPage implements OnInit {
     private callNumber: CallNumber,
     private sms: SMS,
     public formBuilder: FormBuilder,
-    private androidPermissions: AndroidPermissions
+    private androidPermissions: AndroidPermissions,
+    private socialSharing: SocialSharing
   ) { }
 
   ngOnInit() {
@@ -35,6 +37,15 @@ export class MembersdetailsPage implements OnInit {
     });
   }
 
+  shareFn() {
+    this.socialSharing.shareViaWhatsApp('Arun Kumar details... !', '', '').then((res) => {
+      console.log(res);
+      // Success
+    }).catch((e) => {
+      alert(JSON.stringify(e));
+    });
+  }
+
   async onSubmit(values) {
     console.log(values);
   }
@@ -42,7 +53,18 @@ export class MembersdetailsPage implements OnInit {
 
   smsFn() {
     this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.SEND_SMS).then(() => {
-      this.sms.send('7904768050', 'Hello world!');
+
+      const options = {
+        replaceLineBreaks: false,
+        android: {
+          intent: 'INTENT'
+        }
+      };
+      this.sms.send('1234567890', 'Hello world!', options).then(result => {
+        console.log(result);
+      }, error => {
+        console.log(error);
+      });
     }).catch((err) => {
       alert(JSON.stringify(err));
     });

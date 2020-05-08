@@ -7,241 +7,257 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content>
+  <!-- <ion-button (click)="whatsAppShare()">
+    whatsapp
+  </ion-button> -->
+
   <ion-list lines="full">
 
-    <ion-item-sliding class="animated fadeInLeft" > 
-      <ion-item routerLink="/membersdetails" >
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/noImg.png">
-        </ion-thumbnail>
-        <ion-label>
-          <h3>
-            <ion-text color="success">Arun kumar</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Manager - Hardware Testing, Enlighted Chennai, India</p>
-          <p>2003 - E & I</p>
-        </ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
-        </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-
-    <ion-item-sliding class="animated fadeInRight" > 
+    <ion-item-sliding class="animated fadeInLeft">
       <ion-item routerLink="/membersdetails">
         <ion-thumbnail slot="start">
           <img src="../../../assets/noImg.png">
         </ion-thumbnail>
         <ion-label>
-          <h3>
-            <ion-text color="success">Ashok kumar</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Proprietor - BBS Network, Chennai, India</p>
-          <p>1997 - M & P</p>
+          <ion-text>
+            <b class="text-danger">Arun kumar</b>&nbsp;<span style="font-size: 14px;">( 2003 - E & I )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Manager - Hardware Testing, Enlighted</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
         </ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
         </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding class="animated fadeInLeft" > 
-      <ion-item routerLink="/membersdetails" >
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/noImg.png">
-        </ion-thumbnail>
-        <ion-label>
-          <h3>
-            <ion-text color="success">Avinav Mohanty</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Design Engineer - Enlighted Inc, Chennai, India</p>
-          <p>2011 - Electrical</p>
-        </ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
-        </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
 
-    <ion-item-sliding class="animated fadeInRight" > 
+    <ion-item-sliding class="animated fadeInRight">
       <ion-item routerLink="/membersdetails">
         <ion-thumbnail slot="start">
           <img src="../../../assets/noImg.png">
         </ion-thumbnail>
         <ion-label>
-          <h3>
-            <ion-text color="success">Babu Venkatesh</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Director, Glosap Consulting Pte Ltd India / Singapore / Malayasia</p>
-          <p>1998 - Electrical</p>
+          <ion-text>
+            <b class="text-danger">Ashok kumar</b>&nbsp;<span style="font-size: 14px;">( 1997 - M & P )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Proprietor - BBS Network</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
         </ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
         </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding class="animated fadeInLeft" > 
-      <ion-item routerLink="/membersdetails" >
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/noImg.png">
-        </ion-thumbnail>
-        <ion-label>
-          <h3>
-            <ion-text color="success">Suresh Kumar</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Android Developer, Chennai, India</p>
-          <p>2016 - Computer Science</p>
-        </ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
-        </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding class="animated fadeInRight" > 
+    <ion-item-sliding class="animated fadeInLeft">
       <ion-item routerLink="/membersdetails">
         <ion-thumbnail slot="start">
           <img src="../../../assets/noImg.png">
         </ion-thumbnail>
         <ion-label>
-          <h3>
-            <ion-text color="success">Arun kumar</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Manager - Hardware Testing, Enlighted Chennai, India</p>
-          <p>2003 - E & I</p>
+          <ion-text>
+            <b class="text-danger">Avinav Mohanty</b>&nbsp;<span style="font-size: 14px;">( 2011 - Electrical )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Design Engineer - Enlighted Inc</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
         </ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
         </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-
-    <ion-item-sliding class="animated fadeInLeft" > 
-      <ion-item routerLink="/membersdetails" >
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/noImg.png">
-        </ion-thumbnail>
-        <ion-label>
-          <h3>
-            <ion-text color="success">Ashok kumar</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Proprietor - BBS Network, Chennai, India</p>
-          <p>1997 - M & P</p>
-        </ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
-        </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding class="animated fadeInRight" > 
+    <ion-item-sliding class="animated fadeInRight">
       <ion-item routerLink="/membersdetails">
         <ion-thumbnail slot="start">
           <img src="../../../assets/noImg.png">
         </ion-thumbnail>
         <ion-label>
-          <h3>
-            <ion-text color="success">Avinav Mohanty</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Design Engineer - Enlighted Inc, Chennai, India</p>
-          <p>2011 - Electrical</p>
+          <ion-text>
+            <b class="text-danger">Babu Venkatesh</b>&nbsp;<span style="font-size: 14px;">( 1998 - Electrical )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Director, Glosap Consulting Pte Ltdc</p>
+          <p> India / Singapore / Malayasia</p>
+          <p>&nbsp;</p>
+
         </ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
         </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding class="animated fadeInLeft" > 
-      <ion-item routerLink="/membersdetails" >
+    <ion-item-sliding class="animated fadeInLeft">
+      <ion-item routerLink="/membersdetails">
         <ion-thumbnail slot="start">
           <img src="../../../assets/noImg.png">
         </ion-thumbnail>
         <ion-label>
-          <h3>
-            <ion-text color="success">Babu Venkatesh</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Director, Glosap Consulting Pte Ltd India / Singapore / Malayasia</p>
-          <p>1998 - Electrical</p>
+          <ion-text>
+            <b class="text-danger">Suresh Kumar</b>&nbsp;<span style="font-size: 14px;">( 2016 - Comp Sci )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Android Developer, Test Consulting Pte Ltdc</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
         </ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
         </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding class="animated fadeInRight" > 
-      <ion-item routerLink="/membersdetails" >
+    <ion-item-sliding class="animated fadeInRight">
+      <ion-item routerLink="/membersdetails">
         <ion-thumbnail slot="start">
           <img src="../../../assets/noImg.png">
         </ion-thumbnail>
         <ion-label>
-          <h3>
-            <ion-text color="success">Suresh Kumar</ion-text>
-          </h3>
-          <p class="ion-text-wrap">Android Developer, Chennai, India</p>
-          <p>2016 - Computer Science</p>
+          <ion-text>
+            <b class="text-danger">Arun kumar</b>&nbsp;<span style="font-size: 14px;">( 2003 - E & I )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Manager - Hardware Testing, Enlighted</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
         </ion-label>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option color="success" >
-          <i class="fa fa-phone fa-2x" (click)="callFn()" ></i>&nbsp;CALL
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
         </ion-item-option>
-        <ion-item-option color="warning" >
-          <i class="fa fa-comments fa-2x" (click)="smsFn()"></i>&nbsp;SMS
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
- 
+
+
+    <ion-item-sliding class="animated fadeInLeft">
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <ion-text>
+            <b class="text-danger">Ashok kumar</b>&nbsp;<span style="font-size: 14px;">( 1997 - M & P )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Proprietor - BBS Network</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
+
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInRight">
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <ion-text>
+            <b class="text-danger">Avinav Mohanty</b>&nbsp;<span style="font-size: 14px;">( 2011 - Electrical )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Design Engineer - Enlighted Inc</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
+        </ion-item-option>
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInLeft">
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <ion-text>
+            <b class="text-danger">Babu Venkatesh</b>&nbsp;<span style="font-size: 14px;">( 1998 - Electrical )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Director, Glosap Consulting Pte Ltdc</p>
+          <p> India / Singapore / Malayasia</p>
+          <p>&nbsp;</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
+        </ion-item-option>
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding class="animated fadeInRight">
+      <ion-item routerLink="/membersdetails">
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/noImg.png">
+        </ion-thumbnail>
+        <ion-label>
+          <ion-text>
+            <b class="text-danger">Suresh Kumar</b>&nbsp;<span style="font-size: 14px;">( 2016 - Comp Sci )</span>
+          </ion-text>
+          <p class="ion-text-wrap">Android Developer, Test Consulting Pte Ltdc</p>
+          <p>Chennai, India</p>
+          <p>&nbsp;</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="warning" (click)="smsFn()">
+          <i class="fa fa-comments fa-2x"></i>&nbsp;SMS
+        </ion-item-option>
+        <ion-item-option color="success" (click)="callFn()">
+          <i class="fa fa-phone fa-2x"></i>&nbsp;CALL
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
   </ion-list>
 
 
