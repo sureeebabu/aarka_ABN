@@ -1,8 +1,72 @@
 <app-topbar pagetitle="Contact Us"></app-topbar>
 <ion-content>
-    <div class="noRecordContainer">
+  <ion-slides>
+    <!-- <ion-slide>
+      <img src="../../../assets/slider.png" alt="">
+    </ion-slide> -->
+    <ion-slide>
+      <img src="../../../assets/speaker-background.png" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid class="card-grid">
+    <ion-row>
+      <ion-col size="6">
+        <ion-card mode="ios" class="ion-no-margin" (click)="callFn()" >
+          <ion-card-content>
+            <span class="text-theme"><strong>Call us</strong></span> <br>
+            521234567890
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card mode="ios" class="ion-no-margin">
+          <ion-card-content>
+            <span class="text-theme"><strong>Mail us</strong></span> <br>
+            contact@email.com
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <!-- <ion-card-header>
+      <ion-card-title>Send message</ion-card-title>
+    </ion-card-header> -->
+    <ion-card-content>
+      <h1 class="ion-text-center">Send Message</h1>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating" color="success">Email *
+        </ion-label>
+        <ion-input type="text"   color="light" clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="success">Name</ion-label>
+        <ion-input class="ion-text-right"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="success">Phone</ion-label>
+        <ion-input class="ion-text-right"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="success">Message</ion-label>
+        <ion-input class="ion-text-right"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding-top">
+      <ion-button expand="block" color="success" shape="outline">
+        Submit
+      </ion-button>
+    </div>
+    </ion-card-content>
+  </ion-card>
+
+    <!-- <div class="noRecordContainer">
         <ion-text color="success">
           <b>Content Coming Soon .....</b>
         </ion-text>
-      </div>
+      </div> -->
 </ion-content>
